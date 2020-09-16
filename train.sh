@@ -27,7 +27,7 @@ if [[ ! -d $RUNDIR/model ]]; then
 			--run_dir "$RUNDIR" \
 			--data_dir "$DATADIR" \
 			--seed 1234 \
-			--num_gpus 2
+			--num_gpus 1
 
 			#--auto_config \
 			#--checkpoint_path parent_model \
@@ -38,6 +38,6 @@ else
 			--run_dir "$RUNDIR" \
 			--data_dir "$DATADIR" \
 			--seed 1234 \
-			--num_gpus 2
+			--num_gpus 1
 # it seems that calling the same procedure restores the last checkpoint without need of further editing, keeping the if-else for future reference
 fi

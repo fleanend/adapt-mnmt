@@ -60,12 +60,12 @@ if [ ! -d $DSTDIR -a -d $DATADIR ]; then
     COUNT=$((COUNT+1))
     for SET in train dev test; do
 
-	RAWDATA=$DATA/ted-${SET}.orig
+	RAWDATA=$DATA/${SET}
 
 	if [ -n $FLAG ]; then 
           $NORM < ${RAWDATA}.$SRC | $DEES | $DETOK -l $SRC -q | awk -vtgt_tag="<2${TGT}>" '{ print tgt_tag" "$0 }' >> ${SET}.src	#$SRC 
 
-          $NORM < ${RAWDATA}.$SRC | $DEES | $DETOK -l $SRC -q  >> ${SET}.tgt	
+          $NORM < ${RAWDATA}.$TGT | $DEES | $DETOK -l $TGT -q  >> ${SET}.tgt	
 
 	else
           $NORM < ${RAWDATA}.$SRC | $DEES | $DETOK -l $SRC -q  >> ${SET}.src

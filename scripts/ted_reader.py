@@ -136,7 +136,7 @@ if __name__ == "__main__":
     #src_lang, trg_lang = #"en", "ro"
 
     # read ted_langs_list to extract [langs-en] pairs
-    with open("./ted_talks_langs.txt", 'r') as f:
+    with open('../../scripts/ted_talks_langs.txt', 'r') as f:
         langs = f.read().splitlines()
         for src_lang in langs:
             trg_lang="en"

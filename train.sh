@@ -32,5 +32,12 @@ if [[ ! -d $RUNDIR/model ]]; then
 			#--auto_config \
 			#--checkpoint_path parent_model \
 else
-  echo -e "\nModel exists: $RUNDIR/model "
+  python $ONMT/bin/main.py train_and_eval \
+			--config $CONFIG \
+			--model $MODEL_DEFN \
+			--run_dir "$RUNDIR" \
+			--data_dir "$DATADIR" \
+			--seed 1234 \
+			--num_gpus 2
+# it seems that calling the same procedure restores the last checkpoint without need of further editing, keeping the if-else for future reference
 fi

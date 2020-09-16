@@ -2,6 +2,10 @@
 
 __Updates__
 
+[September, 2020] Updated repo to work smoothly on Google Colab
+
+---
+
 [July, 2020] Updated repo with scripts and notes on experimental settings
 
 ---

@@ -46,12 +46,10 @@ def main():
 
   vocab = utils.Vocab(
       special_tokens=special_tokens,
-      from_file=args.from_vocab,
-      from_format=args.from_format)
+      from_file=args.from_vocab)
   for data_file in args.data:
     vocab.add_from_text(data_file, tokenizer=tokenizer)
   vocab = vocab.prune(max_size=args.size, min_frequency=args.min_frequency)
-  vocab.pad_to_multiple(args.size_multiple, num_oov_buckets=1)
   vocab.serialize(args.save_vocab)
 
 

@@ -61,7 +61,7 @@ train:
   save_checkpoints_steps: 1000  # update accordingly 
   keep_checkpoint_max: 10
   save_summary_steps: 50
-  train_steps: 500000           # small-models 60000 steps, 200k training examples 100000 steps
+  train_steps: 60000           # small-models 60000 steps, 200k training examples 100000 steps
   sample_buffer_size: 5000000
   maximum_features_length: 100  
   maximum_labels_length: 100

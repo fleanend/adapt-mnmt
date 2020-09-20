@@ -50,12 +50,7 @@ if [ ! -d $DSTDIR -a -d $DATADIR ]; then
 
     echo "BUILDING: $SRC>$TGT"
  
-    if [ $SRC = 'en' ]; then
-      DATA=$DATADIR/${TGT}_${SRC}
-    else	
-      DATA=$DATADIR/${SRC}_${TGT}
-    fi
-
+    DATA=$DATADIR/$EXPID
 
     COUNT=$((COUNT+1))
     for SET in train dev test; do
